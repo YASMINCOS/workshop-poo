@@ -14,6 +14,10 @@ public class Vestuario extends Produto {
     @Override
     public void exibirInformacoes() {
         System.out.println("Tipo: Vestuário");
+        System.out.println("Código: " + getCodigo());
+        System.out.println("Nome: " + getNome());
+        System.out.println("Preço: " + getPreco());
+        System.out.println("Quantidade: " + getQuantidade());
         System.out.println("Tamanho: " + tamanho);
     }
 }

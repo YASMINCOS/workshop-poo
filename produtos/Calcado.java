@@ -13,6 +13,10 @@ public class Calcado extends Produto {
     @Override
     public void exibirInformacoes() {
         System.out.println("Tipo: Calçado");
+        System.out.println("Código: " + getCodigo());
+        System.out.println("Nome: " + getNome());
+        System.out.println("Preço: " + getPreco());
+        System.out.println("Quantidade: " + getQuantidade());
         System.out.println("Número: " + numero);
     }
 }

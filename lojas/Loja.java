@@ -1,11 +1,11 @@
 package lojas;
 import java.util.ArrayList;
-
+import java.util.List;
 import produtos.Produto;
 import estoque.Estoque; 
 
 public class Loja implements Estoque {
-    private ArrayList<Produto> estoque;
+    private List<Produto> estoque;
 
     public Loja() {
         this.estoque = new ArrayList<>();
@@ -35,11 +35,13 @@ public class Loja implements Estoque {
     }
 
     @Override
-    public void listarProdutos() {
-        System.out.println("Produtos em estoque:");
+    public void listarProdutosPorTipo(Class<?> tipoProduto) {
+        System.out.println("Produtos do tipo " + tipoProduto.getSimpleName() + " em estoque:");
         for (Produto produto : estoque) {
-            produto.exibirInformacoes();
-            System.out.println("-----------------------");
+            if (tipoProduto.isInstance(produto)) {
+                produto.exibirInformacoes();
+                System.out.println("-----------------------");
+            }
         }
     }
 }

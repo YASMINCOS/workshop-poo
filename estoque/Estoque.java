@@ -5,5 +5,5 @@ import produtos.Produto;
 public interface Estoque {
     void adicionarProduto(Produto produto);
     void removerProduto(String codigo);
-    void listarProdutos();
+    void listarProdutosPorTipo(Class<?> tipoProduto);
 }
